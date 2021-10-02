@@ -1,0 +1,77 @@
+.cells{
+    padding: 10px;
+}
+
+
+.reqid{
+    width: 200px;
+    text-align: center;
+}
+
+.reqrank{
+    width: 300px;
+    text-align: center;
+}
+
+.reqtext{
+    width: 600px;
+}
+
+.reqlink{
+    width: 200px;
+    text-align: center;
+    color: $purple;
+    background-color: white;
+    border: 1px solid $purple;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+th {
+    border: none !important;
+    background-color: #eee !important;
+    color: black !important;
+}
+
+.reqtitle{
+    font-size: 1.2em;
+    font-weight: 400;
+    color: black;
+    text-align: center;
+}
+
+.reqbutton{
+    color: $red;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 5px;
+    border: none;
+    background-color: $purple;
+    outline: none;
+    
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+textarea {
+	display: flex;
+	flex-basis: 100%;
+
+	overflow: auto;
+	outline: none;
+
+	// box-shadow: $shadow-all;
+    box-shadow: none;
+	border: none;
+	font-size: 1.3em;
+	padding: 0.8em 0.8em;
+	overflow-wrap: break-word;
+	resize: none;
+	tab-size: 4;
+
+	&::placeholder {
+		color: black;
+		opacity: 0.2;
+	}
+}

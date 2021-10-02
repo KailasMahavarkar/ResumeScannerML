@@ -1,0 +1,66 @@
+// Project Variables
+$black: black;
+$darkest: #0c0c0c;
+$darker: #0e0e0e;
+$dark: #1a1a1a;
+
+// $grey: #545E75;
+$grey: #5E6982;
+
+
+$blue: #1dbceb;
+
+$red: #FF4C29;
+$white: #eeeeee;
+
+$success: #2ab34a;
+$warning: #ffce3b;
+
+$purple:  #7727d8;
+$amethyst: #9B5DE5;
+$violet: rgb(174,150,202);
+
+$minion_yellow: #FEE440;
+$russian_violet: #0D0630;
+
+$shadow_50: 0px 0px 1px rgba(0, 0, 0, 0.25);
+$shadow_100: 0px 1px 1px rgba(0, 0, 0, 0.25);
+$shadow_200: 0px 2px 2px rgba(0, 0, 0, 0.25);
+$shadow_300: 0px 3px 3px rgba(0, 0, 0, 0.25);
+$shadow_400: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$shadow_all: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+
+
+$shadow_x400: 0px 0px 8px 0px rgba(0, 0, 0, 0.50);
+$shadow_x300: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+$shadow_x200: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+$shadow_x100: 0px 0px 2px 0px rgba(0, 0, 0, 0.10);
+$shadow_x50: 0px 0px 1px 0px rgba(0, 0, 0, 0.05);
+
+$shadow_1: 0px 2px 6px 0px rgba(0, 0, 0, 5%);
+
+$glass: linear-gradient(145deg, rgba(174,150,202,1) 0%, rgba(111,83,184,1) 26%, rgba(79,74,177,1) 63%, rgba(49,64,157,1) 100%);
+
+$sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+$poppins: 'Poppins';
+
+// media aliases and breakpoints
+// $screen-vs-min: 320px;
+// $screen-vs-max: 479px;
+
+$screen-xs-max: 767px;
+
+// small -> 600 to 959
+$screen-sm-min: 768px;
+$screen-sm-max: 959px;
+
+$screen-md-min: 960px;
+$screen-md-max: 1279px;
+
+$screen-lg-min: 1280px;
+$screen-lg-max: 1919px;
+
+$screen-xl-max: 5000px;
+$screen-xl-min: 1920px;
+
+

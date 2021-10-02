@@ -1,0 +1,49 @@
+@mixin red{
+	color: $red;
+}
+@mixin bgRed{
+	background-color: $red;
+}
+
+
+
+
+@mixin blue{
+	color: $dblue;
+}
+@mixin bgBlue{
+	background-color: $dblue;
+}
+
+
+@mixin dred{
+	color: $dred;
+}
+@mixin bgDred{
+	background-color: $dred;
+}
+
+
+@mixin dBlue{
+	color: $dblue;
+}
+@mixin bgDblue{
+	background-color: $dblue;
+}
+
+@mixin white{
+	color: $white;
+}
+@mixin bgWhite{
+	background-color: $white;
+}
+
+
+@mixin dwhite {
+	color: $dwhite;
+}
+
+@mixin bgDwhite{
+	background-color: $dwhite;
+}
+

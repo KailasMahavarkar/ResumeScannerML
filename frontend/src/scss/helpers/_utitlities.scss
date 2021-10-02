@@ -1,0 +1,29 @@
+// $generalunit: 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100;
+// $flexunit: 1 2 3 4 5 6 7 8 9;
+
+// // width
+// @each $size in $generalunit {
+// 	.w#{$size} {
+// 		width: #{$size + "%"};
+// 	}
+// }
+
+// @each $size in $generalunit {
+// 	.h#{$size} {
+// 		width: #{$size + "%"};
+// 	}
+// }
+
+
+// @each $unit in $flexunit {
+// 	.col-#{$unit} {
+// 		flex: #{$unit + "%"};
+// 	}
+// }
+
+
+// .flex{
+// 	display: flex;
+// 	flex-basis: auto;
+// 	flex-direction: row;
+// }

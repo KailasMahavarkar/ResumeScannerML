@@ -1,0 +1,74 @@
+// container > main > navbar
+.navbar {
+	// @include test;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	overflow: none;
+	box-shadow: $shadow_x300;
+
+	// padding-bottom: 20px;
+	// margin: 10px 0px;
+	padding: 10px;
+
+	&__logo {
+		flex-grow: 1;
+
+		// @include test;
+		margin-left: 50px;
+
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		font-weight: bold;
+		font-size: 2em;
+		color: $purple;
+		text-decoration: underline;
+
+		cursor: pointer;
+		text-underline-position: under;
+	}
+
+	&__menu {
+		// @include test;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: right;
+		align-items: center;
+
+		&__item {
+			// @include test;
+			color: white;
+			background-color: $purple;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+
+			border: 1px solid $purple;
+			border-radius: 5px;
+
+			box-sizing: border-box;
+
+			// font-size: 1.2em;
+			padding: 10px;
+			margin: 10px 15px 10px 15px;
+			cursor: pointer;
+			transition: all ease-out 250ms;
+
+			&:hover {
+				// inverse current color with background color
+				@include inverse(white, $purple);
+				transition: all ease-in 250ms;
+			}
+		}
+
+		&__logout {
+			color: $red;
+		}
+	}
+}

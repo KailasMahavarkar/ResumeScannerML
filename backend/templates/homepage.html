@@ -1,0 +1,75 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/> -->
+		<link rel="stylesheet" href="../static/css/main.css" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<div class="xcontainer">
+			<div class="xcontainer__block">
+				<div class="xcontainer__block__intro">
+					Writing a resume is not a trivial task, especially when it
+					comes to the right selection of keywords. People spend hours
+					writing and formatting the perfect resume hoping it to be
+					read by a talent acquisition professional and, eventually,
+					help them land a job interview. Unfortunately, around 75% of
+					resumes submitted are never seen by a human eye.
+				</div>
+				<div class="xcontainer__block__selection">
+					<form action="#">
+						<div class="input-file-container">
+							<input
+								class="input-file"
+								id="my-file"
+								type="file"
+							/>
+							<label
+								tabindex="0"
+								for="my-file"
+								class="input-file-trigger"
+								>Select a file...</label
+							>
+						</div>
+						<p class="file-return"></p>
+					</form>
+				</div>
+				<div class="xcontainer__block__selection">
+					Enter Company Requirements
+				</div>
+			</div>
+
+			<div class="tAcontainer">
+				<textarea
+					name="textarea"
+					id="textarea"
+					placeholder="Company Requirements"
+					cols="30"
+					rows="10"
+				></textarea>
+			</div>
+
+			<div class="mb-3">
+				<label for="formFile" class="form-label">
+					Default file input example
+				</label>
+				<input class="form-control" type="file" id="formFile" />
+			</div>
+		</div>
+	</body>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"
+	></script>
+    <script src='../static/js/fileupload.js'></script>
+</html>

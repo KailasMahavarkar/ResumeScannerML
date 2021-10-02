@@ -1,0 +1,31 @@
+@mixin sectionPadding{
+  padding: 60px 0;
+}
+
+@mixin test {
+	border: 1px solid violet;
+}
+
+@mixin test1{
+	border: 1px solid palegreen;
+}
+
+@mixin test2{
+	border: 1px solid aqua;
+}
+
+
+@mixin ajCenter{
+  align-content: center;
+  justify-content: center;
+}
+
+@mixin ajSelf{
+  align-self: center;
+  justify-self: center;
+}
+
+@mixin inverse($color, $bgColor){
+  color: $bgColor;
+  background-color: $color;
+}
