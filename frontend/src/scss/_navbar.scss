@@ -4,6 +4,7 @@
 
 	display: flex;
 	flex-direction: row;
+    align-items: center;
 	justify-content: space-between;
 
 	overflow: none;
@@ -11,7 +12,7 @@
 
 	// padding-bottom: 20px;
 	// margin: 10px 0px;
-	padding: 10px;
+	padding: 20px;
 
 	&__logo {
 		flex-grow: 1;
@@ -23,7 +24,7 @@
 		justify-content: left;
 		align-items: center;
 		font-weight: bold;
-		font-size: 2em;
+		font-size: 1.5em;
 		color: $purple;
 		text-decoration: underline;
 
@@ -71,4 +72,11 @@
 			color: $red;
 		}
 	}
+
+    @include tablet{
+        &__logo{
+            font-size: 2em;
+        }
+    }
+
 }

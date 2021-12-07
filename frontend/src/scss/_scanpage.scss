@@ -1,41 +1,51 @@
 input[type="file"] {
-    display: none;
+	display: none;
 }
 .custom-file-upload {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    width: 100%;
-    font-size: 1.5em;
-    color: $purple;
-    border: none;
-    background-color: white;
-    cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+	width: 100%;
+	font-size: 1.5em;
+	color: $purple;
+	border: none;
+	background-color: white;
+	cursor: pointer;
 }
 
-.resumedata{
-    padding: 10px;
-    font-size: 0.8em;
+.resumedata {
+	padding: 10px;
+	font-size: 0.8em;
 }
 
-.piechart{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    width: 500px;
+.piechart {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	width: 100%;
+
+	@include tablet {
+		width: 400px;
+	}
+
+	@include laptop {
+		width: 450px;
+	}
+	@include desktop {
+		width: 500px;
+	}
 }
 
-.title{
+.title {
+	color: $purple;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	border-bottom: 1px solid tint($purple, 80%);
 
-    color: $purple;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid tint($purple, 80%);
+	align-items: center;
 
-    align-items: center;
-
-    font-weight: bold;
+	font-weight: bold;
 }
