@@ -57,9 +57,15 @@ section{
 
 .resumescanner {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-around;
 	text-decoration: none;
+
+
+    @include tablet{
+        flex-direction: row;
+    }
+
 	&__item {
 	    flex: 1;
 		display: flex;
@@ -112,4 +118,14 @@ section{
     align-items: center;
     align-self: center;
     justify-content: center;
+}
+
+
+
+.tablet {
+	display: none !important;
+
+	@include tablet {
+		display: flex !important;
+	}
 }

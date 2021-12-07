@@ -1,4 +1,4 @@
-import "../src/css/main.css";
+import "../src/scss/main.css";
 import { MODE, SERVER } from "./helper";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";

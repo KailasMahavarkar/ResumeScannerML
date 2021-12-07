@@ -23,7 +23,7 @@ const Navbar = () => {
 				</Link>
 			</div>
 
-			<div className="navbar__menu">
+			<div className="navbar__menu tablet">
 				<Link to="/scan">
 					<div className="navbar__menu__item" onClick={scanHandler}>
 						Scan Resume

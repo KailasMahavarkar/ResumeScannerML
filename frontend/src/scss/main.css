@@ -44,9 +44,12 @@ section {
 
 .resumescanner {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   text-decoration: none; }
+  @media (min-width: 768px) and (hover: hover) and (pointer: fine) {
+    .resumescanner {
+      flex-direction: row; } }
   .resumescanner__item {
     flex: 1;
     display: flex;
@@ -91,6 +94,12 @@ section {
   align-self: center;
   justify-content: center; }
 
+.tablet {
+  display: none !important; }
+  @media (min-width: 768px) and (hover: hover) and (pointer: fine) {
+    .tablet {
+      display: flex !important; } }
+
 input[type="file"] {
   display: none; }
 
@@ -115,7 +124,16 @@ input[type="file"] {
   align-items: center;
   justify-content: center;
   align-self: center;
-  width: 500px; }
+  width: 100%; }
+  @media (min-width: 768px) and (hover: hover) and (pointer: fine) {
+    .piechart {
+      width: 400px; } }
+  @media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+    .piechart {
+      width: 450px; } }
+  @media (min-width: 1280px) and (hover: hover) and (pointer: fine) {
+    .piechart {
+      width: 500px; } }
 
 .title {
   color: #7727d8;
@@ -235,10 +253,11 @@ textarea {
 .navbar {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   overflow: none;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 10px; }
+  padding: 20px; }
   .navbar__logo {
     flex-grow: 1;
     margin-left: 50px;
@@ -246,7 +265,7 @@ textarea {
     justify-content: left;
     align-items: center;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em;
     color: #7727d8;
     text-decoration: underline;
     cursor: pointer;
@@ -276,3 +295,6 @@ textarea {
         transition: all ease-in 250ms; }
     .navbar__menu__logout {
       color: #FF4C29; }
+  @media (min-width: 768px) and (hover: hover) and (pointer: fine) {
+    .navbar__logo {
+      font-size: 2em; } }
