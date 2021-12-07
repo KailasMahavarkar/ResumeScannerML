@@ -1,13 +1,11 @@
 import random
 import re
-from flask import Flask, json, render_template, request, redirect, jsonify
-from flask_cors import CORS, cross_origin
+from flask import Flask,  request, jsonify
+from flask_cors import CORS
 import Model
-import inspect
 import Miner
 import Rank
 import env
-from string import ascii_letters
 import Cleaner
 import os
 
@@ -33,20 +31,28 @@ def runREQ():
     try:
         if request.files.to_dict(flat=False)['file']:
             xfile = request.files['file']
+            minerResult = Miner.MinePDF(xfile)
 
             if xfile.content_type == "application/pdf":
-                newFileName = env.jp(env.CACHE_PATH, Cleaner.NameGenerator())
-                xfile.save(newFileName)
-                cleaned_resume = Cleaner.CleanResume(
-                    Miner.MinePDF(newFileName))
-
-                return jsonify({
-                    "msg": cleaned_resume,
-                    "result": Model.ProcessData(text=cleaned_resume)
-                })
-            return jsonify({})
+                if (minerResult is not False):
+                    cleaned_resume = Cleaner.CleanResume(minerResult)
+                    return jsonify({
+                        "msg": cleaned_resume,
+                        "success": "success",
+                        "result": Model.ProcessData(text=cleaned_resume)
+                    })
+            return jsonify({
+                "msg": "resume is incorrect or corrupt",
+                "success": "failed",
+                "error": "Client Error"
+            })
     except Exception as e:
-        return jsonify({})
+        print(e)
+        return jsonify({
+            "msg": "could not scan resume",
+            "success": "failed",
+            "error": "Server Error"
+        })
 
 
 @app.route('/read', methods=['POST'])
@@ -66,8 +72,17 @@ def index():
     })
 
 
-if __name__ == '__main__':
+@app.route('/', defaults={'u_path': ''})
+@app.route('/<path:u_path>')
+def allroutes(u_path):
+    return jsonify({
+        "msg": "bad request",
+        "success": "failed",
+        "error": "404 | url not found",
+    })
 
+
+if __name__ == '__main__':
     app.config['CORS_HEADERS'] = 'Content-Type'
     port = int(os.environ.get('PORT', 5000))
     app.run(host='127.0.0.1', port=port, debug=True)

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Upload from "rc-upload";
 import { Pie } from "react-chartjs-2";
 import Loader from "react-loader-spinner";
-import { PIECOLORS } from "../helper";
+import { PIECOLORS, url } from "../helper";
 
 const Scanpage = () => {
 	const [resumeData, setResumeData] = useState();
@@ -11,7 +11,7 @@ const Scanpage = () => {
 	const [running, setRunning] = useState(false);
 
 	const uploadProps = {
-		action: "http://localhost:5000/scan",
+		action: url("/scan"),
 		method: "POST",
 		multiple: false,
 		onStart(file) {
@@ -22,7 +22,9 @@ const Scanpage = () => {
 			setRunning(false);
 			setResumeData(result.msg);
 
-			if (result.result.context) {
+            console.log(result);
+
+			if (result.result?.context) {
 				const data = {
 					labels: Object.keys(result.result.context),
 					datasets: [

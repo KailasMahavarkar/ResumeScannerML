@@ -3,6 +3,7 @@ import axios from "axios";
 import Table from "rc-table";
 import { Link } from "react-router-dom";
 import Loader from "react-loader-spinner";
+import { url } from "../helper";
 
 const Reqpage = () => {
 	const [reqText, setReqText] = useState();
@@ -25,7 +26,7 @@ const Reqpage = () => {
 		localStorage.removeItem("reqText");
 
 		setRunning(true);
-		const result = await axios.post("http://localhost:5000/req", {
+		const result = await axios.post(url("/req"), {
 			text: reqText,
 		});
 

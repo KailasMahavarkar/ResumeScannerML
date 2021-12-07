@@ -2,7 +2,6 @@
 import re
 from flask.json import jsonify
 import env
-import time
 
 
 def requirements(req):

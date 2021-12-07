@@ -4,7 +4,6 @@ import pandas as pd
 import random
 
 ROOT_PATH = os.path.abspath(os.path.dirname(__file__))
-CACHE_PATH = os.path.join(ROOT_PATH, '@cache')
 ASSET_PATH = os.path.join(ROOT_PATH, 'Atemp')
 STORE_PATH = os.path.join(ROOT_PATH, 'Storage')
 MODEL_PATH = os.path.join(STORE_PATH, 'MODEL.sav')

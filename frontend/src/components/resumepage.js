@@ -3,7 +3,7 @@ import { useHistory, useLocation } from "react-router-dom";
 import axios from "axios";
 import { useEffectAsync } from "../helper";
 import { Pie } from "react-chartjs-2";
-import { isEmpty, PIECOLORS } from "../helper";
+import { isEmpty, PIECOLORS, url } from "../helper";
 
 const pieDisplay = (data) => {
 	const pie = {
@@ -39,7 +39,7 @@ const Resumepage = () => {
 		} else {
             console.log('else -->')
 			try {
-				const result = await axios.post(`http://localhost:5000/read`, {
+				const result = await axios.post(url(`/read`), {
 					id: idx,
 				});
                 console.log(result.data.result.probability);
