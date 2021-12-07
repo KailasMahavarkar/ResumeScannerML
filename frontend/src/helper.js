@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 export const MODE = process.env.REACT_APP_MODE === "DEV" ? "DEV" : "PROD";
-export const SERVER = MODE === "DEV" ? "http://localhost:5000" : process.env.REACT_APP_SERVER;
+export const SERVER = MODE === "DEV" ? "http://localhost:5000" : process.env.REACT_APP_SERVER || "";
 
 const jp = (path1, path2) => path1 + path2;
 
