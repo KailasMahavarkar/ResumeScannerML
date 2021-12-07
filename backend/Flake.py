@@ -12,7 +12,6 @@ import Cleaner
 import os
 
 
-
 app = Flask(__name__)
 cors = CORS(app)
 
@@ -38,8 +37,9 @@ def runREQ():
             if xfile.content_type == "application/pdf":
                 newFileName = env.jp(env.CACHE_PATH, Cleaner.NameGenerator())
                 xfile.save(newFileName)
-                cleaned_resume = Cleaner.CleanResume(Miner.MinePDF(newFileName))
-                
+                cleaned_resume = Cleaner.CleanResume(
+                    Miner.MinePDF(newFileName))
+
                 return jsonify({
                     "msg": cleaned_resume,
                     "result": Model.ProcessData(text=cleaned_resume)
@@ -49,15 +49,21 @@ def runREQ():
         return jsonify({})
 
 
-
 @app.route('/read', methods=['POST'])
 def readResume():
-
     try:
         xdata = request.get_json()
-        return jsonify({"result": Rank.singleResume(int(xdata['id']))})  
+        return jsonify({"result": Rank.singleResume(int(xdata['id']))})
     except Exception as e:
         return jsonify({"error": "error"})
+
+
+@app.route('/', methods=['GET'])
+def index():
+    return jsonify({
+        "msg": "Welcome to ResumeRanker API",
+        "success": "success"
+    })
 
 
 if __name__ == '__main__':
