@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 
-const SERVER = "http://localhost:5000";
+export const MODE = process.env.REACT_APP_MODE === "DEV" ? "DEV" : "PROD";
+export const SERVER = MODE === "DEV" ? "http://localhost:5000" : process.env.REACT_APP_SERVER;
 
 const jp = (path1, path2) => path1 + path2;
 
@@ -43,4 +44,4 @@ const PIECOLORS = [
 	"rgba(199, 88, 208, 1)",
 ];
 
-export { jp, SERVER, isEmpty, url, randomID, useEffectAsync, PIECOLORS };
+export { jp,  isEmpty, url, randomID, useEffectAsync, PIECOLORS };
